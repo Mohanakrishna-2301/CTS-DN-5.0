@@ -1,4 +1,4 @@
-package Module_1.Algorithms_Data_Structures;
+package Module_2.Algorithms_Data_Structures;
 
 public class Exercise_1 
 {
