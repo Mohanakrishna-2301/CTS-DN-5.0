@@ -4,7 +4,6 @@ public class AdapterPatternTest
 {
     public static void main(String[] args) 
     {
-        
         // Using PayPal through adapter
         PaymentProcessor paypal = new PayPalAdapter(new PayPalGateway());
         paypal.processPayment(1500);
