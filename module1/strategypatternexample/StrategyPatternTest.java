@@ -7,14 +7,14 @@ public class StrategyPatternTest
         PaymentContext context = new PaymentContext();
 
         // Pay using Credit Card
-        PaymentStrategy creditCard = new CreditCardPayment("1234-5678-9012", "Mohana Krishna");
+        PaymentStrategy creditCard = new CreditCardPayment("1234-5678-9012", "Alan");
         context.setPaymentStrategy(creditCard);
         context.makePayment(5000);
 
         System.out.println();
 
         // Pay using PayPal
-        PaymentStrategy paypal = new PayPalPayment("mohana@example.com");
+        PaymentStrategy paypal = new PayPalPayment("alan@example.com");
         context.setPaymentStrategy(paypal);
         context.makePayment(2500);
     }
