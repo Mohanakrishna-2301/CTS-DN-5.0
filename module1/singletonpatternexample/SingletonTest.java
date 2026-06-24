@@ -20,5 +20,4 @@ public class SingletonTest
             System.out.println("Logger instances are different.");
         }
     }
-    
 }
