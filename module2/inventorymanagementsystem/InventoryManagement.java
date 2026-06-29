@@ -23,8 +23,8 @@ public class InventoryManagement
     {
         Product product = inventory.get(id);
 
-        if (product != null) {
-
+        if (product != null) 
+        {
             product.setProductName(name);
             product.setQuantity(quantity);
             product.setPrice(price);
