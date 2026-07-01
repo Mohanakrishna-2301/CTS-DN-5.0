@@ -1,6 +1,6 @@
-package com.junitadvance;
+package com.exercise;
 
-public class EvenChecker
+public class EvenChecker 
 {
     public boolean isEven(int number) 
     {
