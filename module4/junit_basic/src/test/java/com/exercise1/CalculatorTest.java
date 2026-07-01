@@ -22,14 +22,16 @@ public class CalculatorTest
     }
 
     @Test
-    public void testMultiply() {
+    public void testMultiply() 
+    {
         Calculator calc = new Calculator();
         int result = calc.multiply(3, 5);
         assertEquals(15, result);
     }
 
     @Test
-    public void testDivide() {
+    public void testDivide() 
+    {
         Calculator calc = new Calculator();
         int result = calc.divide(20, 4);
         assertEquals(5, result);
