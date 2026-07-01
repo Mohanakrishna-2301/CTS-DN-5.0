@@ -1,4 +1,4 @@
-package com.exercise1;
+package com.junitbasic;
 
 public class Calculator 
 {

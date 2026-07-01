@@ -1,9 +1,11 @@
-package com.exercise1;
+package com.junitbasic;
 
 import static org.junit.Assert.assertEquals;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+
+import com.junitbasic.Calculator;
 
 public class CalculatorAAATest 
 {

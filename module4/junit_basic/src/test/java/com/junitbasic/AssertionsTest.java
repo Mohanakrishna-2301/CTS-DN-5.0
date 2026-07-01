@@ -1,4 +1,4 @@
-package com.exercise1;
+package com.junitbasic;
 
 import static org.junit.Assert.*;
 import org.junit.Test;
