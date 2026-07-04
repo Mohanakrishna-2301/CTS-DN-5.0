@@ -30,7 +30,7 @@ class UserControllerTest
     {
         User user = new User(1L,"Alan");
 
-        when(userService.getUserById(1L))
+        when(userService.getUser(1L))
                 .thenReturn(user);
 
         mockMvc.perform(get("/users/1"))

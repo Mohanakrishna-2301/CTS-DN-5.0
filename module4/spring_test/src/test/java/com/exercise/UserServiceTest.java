@@ -27,7 +27,7 @@ public class UserServiceTest
     UserService service;
 
     @Test
-    void testGetUserById() 
+    void testGetUser() 
     {
         User user=new User();
         user.setId(1L);
@@ -36,7 +36,7 @@ public class UserServiceTest
         when(repository.findById(1L))
                 .thenReturn(Optional.of(user));
 
-        User result=service.getUserById(1L);
+        User result = service.getUser(1L);
 
         assertEquals("John",result.getName());
     }
