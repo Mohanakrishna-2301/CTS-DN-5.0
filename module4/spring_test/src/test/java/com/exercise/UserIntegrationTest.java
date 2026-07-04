@@ -1,16 +1,16 @@
 package com.exercise;
 
+import com.exercise.model.User;
+import com.exercise.repository.UserRepository;
+
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import com.exercise.model.User;
-import com.exercise.repository.UserRepository;
-
 @SpringBootTest
-class UserIntegrationTest
+class UserIntegrationTest 
 {
     @Autowired
     private UserRepository repository;
@@ -26,6 +26,6 @@ class UserIntegrationTest
 
         assertNotNull(saved);
 
-        assertEquals("Alan", saved.getName());
+        assertEquals("Alan",saved.getName());
     }
 }

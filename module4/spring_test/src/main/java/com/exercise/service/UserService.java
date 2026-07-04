@@ -20,5 +20,4 @@ public class UserService
     {
         return repository.findById(id).orElse(null);
     }
-
 }
