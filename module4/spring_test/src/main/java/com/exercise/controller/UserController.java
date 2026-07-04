@@ -23,6 +23,6 @@ public class UserController
     @GetMapping("/{id}")
     public ResponseEntity<User> getUser(@PathVariable("id") Long id) 
     {
-        return ResponseEntity.ok(userService.getUser(id));
+        return ResponseEntity.ok(userService.getUserById(id));
     }
 }

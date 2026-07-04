@@ -2,6 +2,9 @@ package com.exercise.service;
 
 import com.exercise.model.User;
 import com.exercise.repository.UserRepository;
+
+import java.util.NoSuchElementException;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,6 +21,11 @@ public class UserService
 
     public User getUser(Long id)
     {
-        return repository.findById(id).orElse(null);
+        return repository.findById(id).orElseThrow(() -> new NoSuchElementException("User not found"));
+    }
+
+    public User getUserById(Long id)
+    {
+        throw new NoSuchElementException("User not found");
     }
 }
