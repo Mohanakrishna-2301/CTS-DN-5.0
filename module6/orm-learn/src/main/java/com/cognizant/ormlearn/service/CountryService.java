@@ -23,4 +23,34 @@ public class CountryService
     {
         return countryRepository.findAll();
     }
+
+    @Transactional(readOnly = true)
+    public Country getCountry(String code)
+    {
+        return countryRepository.findById(code).orElse(null);
+    }
+
+    @Transactional
+    public void addCountry(Country country)
+    {
+        countryRepository.save(country);
+    }
+
+    @Transactional
+    public void updateCountry(Country country) 
+    {
+        countryRepository.save(country);
+    }
+
+    @Transactional
+    public void deleteCountry(String code) 
+    {
+        countryRepository.deleteById(code);
+    }
+
+    @Transactional(readOnly = true)
+    public List<Country> searchCountry(String name) 
+    {
+        return countryRepository.findByNameContainingIgnoreCase(name);
+    }
 }
