@@ -2,9 +2,14 @@
 
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+
        xsi:schemaLocation="
        http://www.springframework.org/schema/beans
-       https://www.springframework.org/schema/beans/spring-beans.xsd">
+       https://www.springframework.org/schema/beans/spring-beans.xsd
+
+       http://www.springframework.org/schema/aop
+       https://www.springframework.org/schema/aop/spring-aop.xsd">
 
     <!-- Repository Bean -->
     <bean id="bookRepository"
@@ -14,9 +19,33 @@
     <bean id="bookService"
           class="com.library.service.BookService">
 
-        <!-- Dependency Injection -->
-        <property name="bookRepository" ref="bookRepository"/>
+        <property name="bookRepository"
+                  ref="bookRepository"/>
 
     </bean>
+
+    <!-- Aspect Bean -->
+    <bean id="loggingAspect"
+          class="com.library.aspect.LoggingAspect"/>
+
+    <!-- Enable Spring AOP -->
+    <aop:config>
+
+        <!-- Pointcut -->
+        <aop:pointcut
+                id="serviceMethods"
+                expression="execution(* com.library.service.*.*(..))"/>
+
+        <!-- Aspect -->
+        <aop:aspect ref="loggingAspect">
+
+            <!-- Around Advice -->
+            <aop:around
+                    pointcut-ref="serviceMethods"
+                    method="logExecutionTime"/>
+
+        </aop:aspect>
+
+    </aop:config>
 
 </beans>
