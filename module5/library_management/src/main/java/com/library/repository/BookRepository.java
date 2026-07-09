@@ -6,4 +6,9 @@ public class BookRepository
     {
         System.out.println("Book Repository Created");
     }
+
+    public void getBookDetails() 
+    {
+        System.out.println("Fetching book details from repository...");
+    }
 }
